@@ -6,7 +6,7 @@
     <title>Result</title>
 </head>
 <body>
-    <p>The text aabelongs to..test</p>
+    <p>The text belongs2 to..test</p>
     <p style="background-color: yellow"><%=message%></p>
     <br/>
     <hr/>
