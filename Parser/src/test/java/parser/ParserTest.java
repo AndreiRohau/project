@@ -2,12 +2,11 @@ package parser;
 
 import by.asrohau.parser.Parser;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
-public class ParserTest {
+public class ParserTest extends Assert{
 
     private String[] testArray;
     private String[] expectedArray;
