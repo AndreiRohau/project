@@ -12,7 +12,7 @@ public class ParseCommand {
     public void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String goToPage = "/jsp/result.jsp";
 
-        String attribute = request.getParameter("inputstring");
+        String attribute = request.getParameter("verifyString");
         Parser parser = new Parser(attribute);
         String result = parser.getResult();
 

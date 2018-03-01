@@ -22,7 +22,7 @@ public class FrontController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        System.out.println("in servlet : command : " + request.getParameter("command"));
+        System.out.println("in servlet : String : " + request.getParameter("verifyString"));
 
         new ParseCommand().execute(request, response);
 
