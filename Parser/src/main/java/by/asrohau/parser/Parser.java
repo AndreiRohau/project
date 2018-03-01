@@ -2,17 +2,10 @@ package by.asrohau.parser;
 
 public class Parser {
 
-    private String result;
-
-    public Parser (String request) {
-        this.result = parseString(request);
+    public Parser () {
     }
 
-    public String getResult(){
-        return this.result;
-    }
-
-    private String parseString(String request) {
+    public String parseString(String request) {
 
         String phoneRegex = "^((8|\\+375)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
         String emailRegex = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";

@@ -13,9 +13,8 @@ public class ParseCommand {
         String goToPage = "/jsp/result.jsp";
 
         String attribute = request.getParameter("verifyString");
-        Parser parser = new Parser(attribute);
-        String result = parser.getResult();
-
+        Parser parser = new Parser();
+        String result = parser.parseString(attribute);
         request.setAttribute("result", result);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(goToPage);

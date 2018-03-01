@@ -1,10 +1,13 @@
 package parser;
 
 import by.asrohau.parser.Parser;
-import org.junit.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 
-public class ParserTest extends Assert {
+public class ParserTest {
 
     private String[] testArray;
     private String[] expectedArray;
@@ -18,18 +21,23 @@ public class ParserTest extends Assert {
     @After
     public void tearDownToParser(){
         testArray = null;
+        expectedArray = null;
     }
 
     @Test
     public void testToParser(){
+        Parser parser = new Parser();
+
         for(int i = 0; i < testArray.length; i++) {
-            Parser parser = new Parser(testArray[i]);
+
             String expected = expectedArray[i];
-            String actual = parser.getResult();
+            String actual = parser.parseString(testArray[i]);
 
             assertEquals(expected, actual);
         }
+
     }
+
 
 
 }
